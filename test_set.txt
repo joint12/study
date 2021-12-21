@@ -19,9 +19,12 @@ int main()
 	for (auto it = myset.begin(); it != myset.end(); ++it)
 		std::cout << *it << ' ';
 	std::cout << std::endl;
+
+	std::cout << "size: " << myset.size() << std::endl;
 }
 
 /*
 1 5 10 20
 1 5 20
+size: 3
 */
