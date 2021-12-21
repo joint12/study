@@ -1,0 +1,27 @@
+#include <set>
+#include <iostream>
+
+int main()
+{
+	std::set<int> myset;
+
+	myset.insert(1);
+	myset.insert(5);
+	myset.insert(10);
+	myset.insert(20);
+
+	for (auto it = myset.begin(); it != myset.end(); ++it)
+		std::cout << *it << ' ';
+	std::cout << std::endl;
+
+	myset.erase(10);
+
+	for (auto it = myset.begin(); it != myset.end(); ++it)
+		std::cout << *it << ' ';
+	std::cout << std::endl;
+}
+
+/*
+1 5 10 20
+1 5 20
+*/
