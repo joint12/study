@@ -26,10 +26,9 @@ void insert(char in[])
 
 	for (int i = 0; in[i] != NULL; ++i)
 	{
-		Node* new_node = new Node;
-
 		if (cur->child[in[i] - 'a'] == NULL)
 		{
+			Node* new_node = new Node;
 			cur->child[in[i] - 'a'] = new_node;
 		}
 
