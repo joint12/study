@@ -20,7 +20,7 @@ void Init(void)
 {
 }
 
-void insert(char in[])
+void Insert(char in[])
 {
 	Node* cur = head;
 
@@ -38,7 +38,7 @@ void insert(char in[])
 	++(cur->count);
 }
 
-int search(char in[])
+int Search(char in[])
 {
 	Node* cur = head;
 
@@ -57,7 +57,7 @@ int search(char in[])
 	return cur->count;
 }
 
-void remove(char in[])
+void Remove(char in[])
 {
 	Node* cur = head;
 
@@ -80,19 +80,19 @@ int main(void)
 	char val2[] = "bcd";
 	char val3[] = "ab";
 
-	insert(val1);
-	insert(val1);
-	search(val1); // 2
+	Insert(val1);
+	Insert(val1);
+	Search(val1); // 2
 
-	insert(val1);
-	search(val1); // 3
+	Insert(val1);
+	Search(val1); // 3
 
-	search(val2); // 0
+	Search(val2); // 0
 
-	search(val3); // 0
+	Search(val3); // 0
 
-	remove(val1);
-	search(val1); // 0
+	Remove(val1);
+	Search(val1); // 0
 
 	return 0;
 }
