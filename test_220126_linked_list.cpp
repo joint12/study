@@ -21,7 +21,7 @@ public:
 	}
 
 	void AddFrontNode(int n);
-	void AddNode(int n);
+	void AddBackNode(int n);
 	void InsertNode(Node* prevNode, int n);
 	void DeleteNode(Node* prevNode);
 
@@ -50,7 +50,7 @@ void LinkedList::AddFrontNode(int n)
 	}
 }
 
-void LinkedList::AddNode(int n)
+void LinkedList::AddBackNode(int n)
 {
 	Node* temp = new Node;
 
@@ -107,9 +107,9 @@ int main()
 {
 	LinkedList a;
 
-	a.AddNode(1);
-	a.AddNode(2);
-	a.AddNode(3);
+	a.AddBackNode(1);
+	a.AddBackNode(2);
+	a.AddBackNode(3);
 	a.Display(a.GetHead());
 
 	a.AddFrontNode(0);
