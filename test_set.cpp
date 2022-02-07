@@ -6,9 +6,9 @@ int main()
 	std::set<int> myset;
 
 	myset.insert(1);
-	myset.insert(5);
 	myset.insert(10);
 	myset.insert(20);
+	myset.insert(5);
 
 	for (auto it = myset.begin(); it != myset.end(); ++it)
 		std::cout << *it << ' ';
