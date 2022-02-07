@@ -72,20 +72,16 @@ void LinkedList::AddBackNode(int n)
 void LinkedList::InsertNode(Node* prevNode, int n)
 {
 	Node* temp = new Node;
-
 	temp->data = n;
-
 	temp->nextNode = prevNode->nextNode;
-
 	prevNode->nextNode = temp;
 }
 
 void LinkedList::DeleteNode(Node* prevNode)
 {
+	// 삭제할 node의 prev를 인자로 받음
 	Node* temp = prevNode->nextNode;
-
 	prevNode->nextNode = temp->nextNode;
-
 	delete temp;
 }
 
