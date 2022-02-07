@@ -113,7 +113,8 @@ void BST::preorder(tree_node* node)
 {
 	if (node != NULL)
 	{
-		std::cout << node->data << std::endl;
+		// std::cout << node->data << std::endl;
+		std::cout << node->data << " ";
 		preorder(node->left);
 		preorder(node->right);
 	}
@@ -125,7 +126,8 @@ void BST::postorder(tree_node* node)
 	{
 		postorder(node->left);
 		postorder(node->right);
-		std::cout << node->data << std::endl;
+		// std::cout << node->data << std::endl;
+		std::cout << node->data << " ";
 	}
 }
 
@@ -134,7 +136,8 @@ void BST::inorder(tree_node* node)
 	if (node != NULL)
 	{
 		inorder(node->left);
-		std::cout << node->data << std::endl;
+		// std::cout << node->data << std::endl;
+		std::cout << node->data << " ";
 		inorder(node->right);
 	}
 }
@@ -186,5 +189,17 @@ int main(void)
 	else
 		std::cout << "444" << std::endl;
 
+	bst.preorder();
+	std::cout << std::endl;
+
+	bst.postorder();
+	std::cout << std::endl;
+
 	return 0;
 }
+
+// output :
+// 111
+// 444
+// 20 10 5 30 25 35
+// 5 10 25 35 30 20
