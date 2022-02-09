@@ -7,6 +7,7 @@ int main()
 {
 	int a, b, c;
 	int d[10];
+	char ch[10];
 
 	freopen("test_220209_scanf.txt", "r", stdin);
 
@@ -27,6 +28,9 @@ int main()
 		std::cout << d[i] << ", ";
 	std::cout << std::endl;
 
+	scanf("%s", ch);
+	std::cout << "[ch] " << ch << std::endl;
+
 	return 0;
 }
 
@@ -36,3 +40,4 @@ int main()
 // [1] 1
 // [2] 2, 3
 // [3] 4, 5, 6, 7, 8,
+// [ch] hello
