@@ -22,6 +22,8 @@ bool HeapPush(int value)
 	heap[heap_size] = value;
 
 	int current = heap_size;
+	// 아래의 좌측 조건은 current가 0까지 도달했는지 확인을 위한 것임
+	// 우측은 부모가 값이 큰지 확인을 위한 것임
 	while (current > 0 && heap[current] < heap[(current - 1) / 2])
 	{
 		int temp = heap[(current - 1) / 2];
@@ -48,12 +50,13 @@ int HeapPop()
 	int current = 0;
 	while (current * 2 + 1 < heap_size)
 	{
+		// child를 선택하기 위함
 		int child;
-		if (current * 2 + 2 == heap_size)
+		if (current * 2 + 2 == heap_size) // heap_size가 2인 경우를 상상해보자. 그러면 이해가 쉬움
 		{
 			child = current * 2 + 1;
 		}
-		else
+		else // 여기에 왔으면 child가 좌우 모두 존재함을 의미함. 좌우 중에서 값이 작은 node로 내려가기 위함
 		{
 			child = heap[current * 2 + 1] < heap[current * 2 + 2] ? current * 2 + 1 : current * 2 + 2;
 		}
