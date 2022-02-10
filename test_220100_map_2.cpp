@@ -1,0 +1,26 @@
+#include <iostream>
+#include <map>
+#include <string>
+
+int main()
+{
+	std::map<std::string, int> mymap;
+
+	mymap["aa"] = 10;
+	mymap.insert(std::make_pair("bb", 20));
+	mymap.insert(std::pair<std::string, int>("cc", 30));
+
+	for (auto it = mymap.begin(); it != mymap.end(); ++it)
+		std::cout << it->first << " " << it->second << std::endl;
+	std::cout << std::endl;
+
+	///////////////////////////////
+
+	std::cout << "mymap.size() : " << mymap.size() << std::endl;
+}
+
+// aa 10
+// bb 20
+// cc 30
+//
+// mymap.size() : 3
