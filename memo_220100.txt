@@ -1,6 +1,4 @@
 
-set, map은 insert, find, erase를 이용함
-
 https://modoocode.com/176
 'deque'
 처음과 끝 말고 중간에 원소의 삽입과 삭제를 빈번하게 사용한다면 
@@ -34,6 +32,9 @@ https://modoocode.com/223
 https://kindtis.tistory.com/574
 vector, list는 clear가 있음. 하지만 queue는 clear가 없다.
 
+'set, map 정리'
+list는 remove에 값을 넣고, erase에 iterator를 넣는다. 하지만 set, map은 erase 하나로 값, iterator 둘다 가능하다.
+set, map은 insert, find, erase를 이용함
 set, map은 둘다 size()가 가능하다.
 set 증복 추가 안됨. 예를 들어 10을 20개 넣어도 한개만 들어가 있음
 map도 같은 key가 여러개인 경우는 발생하지 않음
