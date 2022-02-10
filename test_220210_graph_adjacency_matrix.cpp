@@ -7,32 +7,40 @@ using namespace std;
 
 #define MAX_VTXS 256    // 최대 정점 개수
 
-class AdjMatrixGraph {
+class AdjMatrixGraph
+{
 private:
 	int size;                       // 정점의 개수
 	char vertices[MAX_VTXS];        // 정점의 이름
 	int adj_matrix[MAX_VTXS][MAX_VTXS];    // 인접 행렬
 
 public:
-	AdjMatrixGraph() {
+	AdjMatrixGraph()
+	{
 		reset();
 	}
 	~AdjMatrixGraph() {}
 
-	char getVertex(int i) {
+	char getVertex(int i)
+	{
 		return vertices[i];
 	}
-	int getEdge(int i, int j) {
+	int getEdge(int i, int j)
+	{
 		return adj_matrix[i][j];
 	}
-	void setEdge(int i, int j, int val) {
+	void setEdge(int i, int j, int val)
+	{
 		adj_matrix[i][j] = val;
 	}
 
 	// 그래프 초기화
-	void reset() {
-		for (int i = 0; i < MAX_VTXS; i++) {
-			for (int j = 0; j < MAX_VTXS; j++) {
+	void reset()
+	{
+		for (int i = 0; i < MAX_VTXS; i++)
+		{
+			for (int j = 0; j < MAX_VTXS; j++)
+			{
 				setEdge(i, j, 0);
 			}
 		}
@@ -40,33 +48,41 @@ public:
 	}
 
 	// 정점 삽입
-	void insertVertex(char name) {
-		if (isFull()) {
+	void insertVertex(char name)
+	{
+		if (isFull())
+		{
 			cout << "Graph vertex full error" << endl;
 			return;
 		}
 
-		vertices[size++] = name;
+		vertices[size] = name;
+		++size;
 	}
 
 	// 간선 삽입 (무방향 그래프)
-	void insertEdge(int u, int v) {
+	void insertEdge(int u, int v)
+	{
 		setEdge(u, v, 1);       // 가중치 그래프에서는 1이 아닌 가중치 삽입
 		setEdge(v, u, 1);       // 방향 그래프에서는 삭제 (<u,v>만 존재)
 	}
 
 	// 그래프 정보 출력
-	void display() {
+	void display()
+	{
 		cout << "vertex size : " << size << endl;
 		cout << "    ";
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++)
+		{
 			cout << getVertex(i) << " ";
 		}
 		cout << endl;
 
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++)
+		{
 			cout << getVertex(i) << " : ";
-			for (int j = 0; j < size; j++) {
+			for (int j = 0; j < size; j++)
+			{
 				cout << getEdge(i, j) << " ";
 			}
 			cout << endl;
