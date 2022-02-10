@@ -59,6 +59,7 @@ int main()
 	//////////////////////////////////////////////////////
 
     // https://www.cplusplus.com/reference/list/list/insert
+    // 리스트에서 insert는 it의 앞자리에 값을 추가해주는 것임
 	std::list<int>::iterator it2 = mylist.begin();
 
 	mylist.push_back(20); /// 9, 20
