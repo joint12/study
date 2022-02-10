@@ -39,3 +39,9 @@ set, map은 둘다 size()가 가능하다.
 set 증복 추가 안됨. 예를 들어 10을 20개 넣어도 한개만 들어가 있음
 map도 같은 key가 여러개인 경우는 발생하지 않음
 다만 key는 같은데, value가 다른 값이 들어가면 덮어쓰기가 된다.
+
+https://gracefulprograming.tistory.com/3
+unordered_map이 hash를 대신할 수 있음
+https://gamdekong.tistory.com/73
+hash_map, hash_set은 표준이 아니다.
+TR1에서는 unordered_map, unordered_set이 준비되어있다.
