@@ -58,6 +58,7 @@ int main()
 	std::cout << std::endl;
 	//////////////////////////////////////////////////////
 
+    // https://www.cplusplus.com/reference/list/list/insert
 	std::list<int>::iterator it2 = mylist.begin();
 
 	mylist.push_back(20); /// 9, 20
