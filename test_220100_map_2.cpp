@@ -17,10 +17,28 @@ int main()
 	///////////////////////////////
 
 	std::cout << "mymap.size() : " << mymap.size() << std::endl;
+	std::cout << "---------------" << std::endl;
+
+	///////////////////////////////
+
+	// https://www.cplusplus.com/reference/map/map/find
+	
+	std::map<std::string, int>::iterator it;
+	it = mymap.find("bb");
+	if (it != mymap.end())
+		mymap.erase(it);
+
+	for (auto it = mymap.begin(); it != mymap.end(); ++it)
+		std::cout << it->first << " " << it->second << std::endl;
+	std::cout << std::endl;
+
 }
 
 // aa 10
 // bb 20
 // cc 30
-//
+
 // mymap.size() : 3
+// ---------------
+// aa 10
+// cc 30
