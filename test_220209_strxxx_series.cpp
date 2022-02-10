@@ -48,6 +48,7 @@ int main()
 	char ch9[20] = "ab";
 	char ch10[20] = "cd";
 
+	// https://dojang.io/mod/page/view.php?id=346
 	// strcmp는 같으면 0, 다르면 +1 이나 -1이 나옴
 	if (!strcmp(ch8, ch9))
 		std::cout << "111" << std::endl;
