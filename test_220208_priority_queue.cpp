@@ -54,6 +54,7 @@ int HeapPop()
 		int child;
 		if (current * 2 + 2 == heap_size) // heap_size가 2인 경우를 상상해보자. 그러면 이해가 쉬움
 		{
+			// 여기에 들어왔으면 'current * 2 + 2'가 비어있을 것임
 			child = current * 2 + 1;
 		}
 		else // 여기에 왔으면 child가 좌우 모두 존재함을 의미함. 좌우 중에서 값이 작은 node로 내려가기 위함

@@ -14,7 +14,7 @@ struct Node
 	}
 };
 
-Node* head = new Node;
+Node* root = new Node;
 
 void Init(void)
 {
@@ -22,56 +22,56 @@ void Init(void)
 
 void Insert(char in[])
 {
-	Node* cur = head;
+	Node* current = root;
 
 	for (int i = 0; in[i] != NULL; ++i)
 	{
-		if (cur->child[in[i] - 'a'] == NULL)
+		if (current->child[in[i] - 'a'] == NULL)
 		{
 			Node* new_node = new Node;
-			cur->child[in[i] - 'a'] = new_node;
+			current->child[in[i] - 'a'] = new_node;
 		}
 
-		cur = cur->child[in[i] - 'a'];
+		current = current->child[in[i] - 'a'];
 	}
 
-	++(cur->count);
+	++(current->count);
 }
 
 int Search(char in[])
 {
-	Node* cur = head;
+	Node* current = root;
 
 	for (int i = 0; in[i] != NULL; ++i)
 	{
-		if (cur->child[in[i] - 'a'] == NULL)
+		if (current->child[in[i] - 'a'] == NULL)
 		{
 			std::cout << "count : " << "zero" << std::endl;
 			return 0;
 		}
 
-		cur = cur->child[in[i] - 'a'];
+		current = current->child[in[i] - 'a'];
 	}
 
-	std::cout << "count : " << cur->count << std::endl;
-	return cur->count;
+	std::cout << "count : " << current->count << std::endl;
+	return current->count;
 }
 
 void Remove(char in[])
 {
-	Node* cur = head;
+	Node* current = root;
 
 	for (int i = 0; in[i] != NULL; ++i)
 	{
-		if (cur->child[in[i] - 'a'] == NULL)
+		if (current->child[in[i] - 'a'] == NULL)
 		{
 			return;
 		}
 
-		cur = cur->child[in[i] - 'a'];
+		current = current->child[in[i] - 'a'];
 	}
 
-	cur->count = 0;
+	current->count = 0;
 }
 
 int main(void)
