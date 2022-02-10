@@ -5,14 +5,14 @@
 #include <iostream>
 using namespace std;
 
-#define MAX_VTXS 256    // 최대 정점 개수
+#define MAX_VERTICES 256    // 최대 정점 개수
 
 class AdjMatrixGraph
 {
 private:
 	int size;                       // 정점의 개수
-	char vertices[MAX_VTXS];        // 정점의 이름
-	int adj_matrix[MAX_VTXS][MAX_VTXS];    // 인접 행렬
+	char vertices[MAX_VERTICES];        // 정점의 이름
+	int adj_matrix[MAX_VERTICES][MAX_VERTICES];    // 인접 행렬
 
 public:
 	AdjMatrixGraph()
@@ -37,9 +37,9 @@ public:
 	// 그래프 초기화
 	void reset()
 	{
-		for (int i = 0; i < MAX_VTXS; i++)
+		for (int i = 0; i < MAX_VERTICES; i++)
 		{
-			for (int j = 0; j < MAX_VTXS; j++)
+			for (int j = 0; j < MAX_VERTICES; j++)
 			{
 				setEdge(i, j, 0);
 			}
@@ -93,7 +93,7 @@ public:
 		return size == 0;
 	}
 	bool isFull() {
-		return size >= MAX_VTXS;
+		return size >= MAX_VERTICES;
 	}
 };
 
