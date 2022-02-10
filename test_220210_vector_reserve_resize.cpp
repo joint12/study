@@ -21,3 +21,6 @@ int main()
 // v1.size(): 0
 // v2.capacity(): 10000
 // v2.size(): 10000
+
+// https://www.cplusplus.com/reference/vector/vector/capacity/
+// https://www.cplusplus.com/reference/vector/vector/resize/
