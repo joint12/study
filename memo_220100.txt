@@ -1,3 +1,14 @@
+'자료구조'
+1 stack
+2 queue
+3 priority queue
+4 hash
+5 tree
+6 graph
+7 linked list
+8 deque
+9 map
+10 set
 
 https://modoocode.com/176
 'deque'
@@ -45,3 +56,10 @@ unordered_map이 hash를 대신할 수 있음
 https://gamdekong.tistory.com/73
 hash_map, hash_set은 표준이 아니다.
 TR1에서는 unordered_map, unordered_set이 준비되어있다.
+
+https://suyeon96.tistory.com/32
+위 링크에 6가지 경우 다 있음
+인접 행렬, 인접 리스트 구현
+각각에 대해 DFS, BFS 있음
+
+
