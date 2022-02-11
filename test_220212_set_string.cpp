@@ -33,6 +33,12 @@ int main()
 	if (it3 != s.end())
 		std::cout << "it3: " << *it3 << std::endl;
 
+	s.erase("hello");
+
+	std::set<std::string>::iterator it4 = s.find("hello");
+	if (it4 != s.end())
+		std::cout << "it4: " << *it4 << std::endl;
+		
 	return 0;
 }
 
