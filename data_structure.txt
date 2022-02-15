@@ -1,0 +1,29 @@
+1. vector
+
+2. stack
+
+3. dequeue
+
+4. priority queue
+
+5. list
+-------------------------
+
+6. set
+
+7. map
+-------------------------
+
+8. unordered_xxx
+
+9. multiset
+동일한 값을 여러번 insert가능. count가 가능.
+------------------------- 여기 위로는 STL 이용
+
+10. tree
+
+11. graph
+
+12. hash
+--> hash는 unordered_map으로 대체한다.
+
