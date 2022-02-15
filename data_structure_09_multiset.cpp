@@ -21,3 +21,7 @@ int main()
 
 	return 0;
 }
+
+// https://www.cplusplus.com/reference/set/multiset/count/
+
+// 그냥 set은 중복으로 값 insert가 불가능하지만, multiset은 중복으로 insert 가능
