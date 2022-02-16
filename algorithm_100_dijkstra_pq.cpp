@@ -5,9 +5,9 @@
 #define MAX 100        // 최대 정점의 개수 
 #define INF 99999999
 
-std::vector<int> dijkstra(int start, int V, std::vector<std::pair<int, int> > adj[])
+std::vector<int> dijkstra(int start, int num_vertex, std::vector<std::pair<int, int> > adj[])
 {
-	std::vector<int> dist(V, INF); // 전부 INF로 초기화 
+	std::vector<int> dist(num_vertex, INF); // 전부 INF로 초기화 
 	std::priority_queue<std::pair<int, int> > pq;
 
 	dist[start] = 0;
@@ -38,10 +38,10 @@ std::vector<int> dijkstra(int start, int V, std::vector<std::pair<int, int> > ad
 int main()
 {
 	std::vector<std::pair<int, int> > adj[MAX];
-	int V = 5;
-	int E = 8;
+	int num_vertex = 5; // 정점의 개수
+	int num_edge = 8; // 간선의 개수
 
-	for (int i = 0; i < E; i++)
+	for (int i = 0; i < num_edge; i++)
 	{
 		int from, to, cost;
 		if (i == 0)
@@ -82,8 +82,8 @@ int main()
 	}
 
 	printf("\n===다익스트라 결과===\n");
-	std::vector<int> dist = dijkstra(0, V, adj);
-	for (int i = 0; i < V; i++)
+	std::vector<int> dist = dijkstra(0, num_vertex, adj);
+	for (int i = 0; i < num_vertex; i++)
 	{
 		printf("0번 정점에서 %d번 정점까지 최단거리 : %d\n", i, dist[i]);
 	}
