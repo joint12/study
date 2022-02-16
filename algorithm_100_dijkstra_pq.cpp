@@ -7,26 +7,27 @@
 
 std::vector<int> dijkstra(int start, int V, std::vector<std::pair<int, int> > adj[])
 {
-	std::vector<int> dist(V, INF);    // 전부 INF로 초기화 
+	std::vector<int> dist(V, INF); // 전부 INF로 초기화 
 	std::priority_queue<std::pair<int, int> > pq;
 
 	dist[start] = 0;
-	pq.push(std::make_pair(0, start));    // 시작 정점 방문 
+	pq.push(std::make_pair(0, start)); // 시작 정점 방문 
 
 	while (!pq.empty())
 	{
-		int cost = -pq.top().first;    // 방문한 정점의 dist 값 
-		int cur = pq.top().second;    // 현재 방문한 정점 
+		// 방문하지 않은 정점 중 가장 가중치가 작은 정점을 방문한다
+		int cost = -pq.top().first; // 방문한 정점의 dist 값 
+		int current = pq.top().second;  // 현재 방문한 정점 
 		pq.pop();
 
-		for (int i = 0; i < adj[cur].size(); i++)     // 현재 방문한 정점의 주변 정점 모두 조사 
+		for (int i = 0; i < adj[current].size(); i++)  // 현재 방문한 정점의 주변 정점 모두 조사 
 		{
-			int next = adj[cur][i].first;    // 조사할 다음 정점 
-			int nCost = cost + adj[cur][i].second;    // 현재 방문한 정점을 거쳐서 다음 정점을 갈때의 비용 
-			if (nCost < dist[next])      // 기존 비용보다 현재 방문한 정점을 거친 비용이 더 싸다면 
+			int next = adj[current][i].first;          // 조사할 다음 정점 
+			int nCost = cost + adj[current][i].second; // 현재 방문한 정점을 거쳐서 다음 정점을 갈때의 비용 
+			if (nCost < dist[next])                // 기존 비용보다 현재 방문한 정점을 거친 비용이 더 싸다면 (방문하지 않음도 반영)
 			{
-				dist[next] = nCost;    // 갱신 
-				pq.push(std::make_pair(-nCost, next));    // pq에 저장 
+				dist[next] = nCost; // 갱신 
+				pq.push(std::make_pair(-nCost, next)); // pq에 저장 
 			}
 		}
 	}
