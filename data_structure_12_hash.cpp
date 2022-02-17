@@ -7,12 +7,12 @@
 # define MAX_DATA 128
 # define MAX_TABLE 4096
 
-typedef struct
+struct Hash
 {
 	char key[MAX_KEY + 1];
 	char data[MAX_DATA + 1];
-} Hash;
-Hash tb[MAX_TABLE];
+};
+struct Hash tb[MAX_TABLE];
 
 unsigned long hash(const char* str)
 {
