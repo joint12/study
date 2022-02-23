@@ -4,7 +4,7 @@
 
 2. stack
 
-3. dequeue
+3. queue, dequeue
 
 4. priority queue
 
