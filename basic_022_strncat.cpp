@@ -22,3 +22,7 @@ int main()
 }
 
 // char 배열 부분 합치기
+
+// ch0: ade
+// ch0[0]: a
+// ch0[1]: d
